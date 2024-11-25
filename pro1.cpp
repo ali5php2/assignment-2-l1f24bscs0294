@@ -29,12 +29,8 @@ int main()
 			if (acc != true)
 			{
 				//Getting users name for Account
-				cout << "Make your Banking Account \n";
-				cout << "Enter your name:- \n";
-				cin.ignore();  // Ignore the leftover newline character from previous input
-				getline(cin, name); 
 				// Account created successfully
-				cout << '\n' << "Your account has been created \n\n";
+				cout << '\n' << "Your account has been created, with an initial amount ($1000) \n\n";
 				acc = true;
 				checker = true;
 			}
@@ -50,39 +46,13 @@ int main()
 			// Option to deposit money
 			if (acc == true)
 			{
-				// Keep asking for the correct PIN until it matches
-				do {
-					// Ask for the user's pin
-					cout << "Enter your pin:- \n";
-					cin >> pin;
-					if (pin == 1234)
-					{
-						// Pin correct
-						check = false;
-					}
-					else
-					{
-						// Pin incorrect, re-prompt
-						cout << "The pin is incorrect \n";
-						cout << "Enter your pin:- \n";
-						cin >> pin;
-						if (pin == 1234)
-						{
-							check = false;
-						}
-						else
-						{
-							check = true;
-						}
-					}
-				} while (check);
 				// Ask for deposit amount
 				cout << "Enter the amount of money to deposit:- \n";
 				cin >> balances;
 				// Ensure deposit amount is positive
-				while (balances < 0)
+				while (balances <= 0)
 				{
-					cout << "Enter a Positive Amount:- \n";
+					cout << "Enter a Valid Positive Amount:- \n";
 					cin >> balances;
 				}
 				// Update balance
