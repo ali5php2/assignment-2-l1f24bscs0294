@@ -6,7 +6,7 @@ int main()
 {
 	// Initializing the variables for available and borrowed book counts
 	int c1=3,c2=2,c3=1,c4=0,c5=5, option,boption,uc1=0,uc2=0,uc3=0,uc5=0;
-	bool menu = false;  // Control variable for the menu loop
+	bool menu = false,bmenu= false;  // Control variable for the menu loop
 	// Start of the main program loop
 	do {
 		cout << "Welcome to the library system \n";  // Display the welcome message
@@ -95,6 +95,11 @@ int main()
 				}
 				menu = true;
 			}
+			else
+		{
+			    cout << "Invalid Option \n\n";
+			    menu = true;
+		}
 		}
 		// If the user chooses to return a book
 		else if (option == 2)
@@ -177,13 +182,23 @@ int main()
 				}
 				menu = true;
 			}
-		}
+			else
+			{
+			    cout << "Invalid Option \n\n";
+			    menu = true;
+			}
+		    }
 		// If the user chooses to exit
 		else if(option == 3)
 		{
 			cout << "You have exited \n";  // Exit message
 			return 0;  // Exit the program
-			}
+		}
+		else
+		{
+			    cout << "Invalid Option \n\n";
+			    menu = true;
+		}
 
 	} while (menu == true);  // Continue looping until menu condition is true
 	return 0;  // Program ends here

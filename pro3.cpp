@@ -7,6 +7,7 @@ int main()
 	// Variables for controlling loops and printing
 	int i = 1,x = 1,y=1,m=1,a=1,b=1,l=1,k=1;
 	// First pattern: Printing numbers in increasing order
+	cout << "1st pattern with while loop \n\n";
 	while (i < 6)  // Outer loop controlling the number of rows
 	{
 		x = 1;  // Reset x for each row
@@ -19,7 +20,7 @@ int main()
 		i++;  // Increment i for the next row
 }
 	cout << "\n\n";  // Space between patterns
-
+	cout << "1st pattern with Do while loop \n\n";
 	//doing the same pattern with do while loop
 	do
 	{
@@ -36,7 +37,7 @@ int main()
 	while (m < 6);  // Outer loop runs until m is 6
 
 	cout << "\n\n";  // Space between patterns
-
+	cout << "2nd pattern with while loop \n\n";
 	// Third pattern: Printing a right-aligned triangle of asterisks
 	while (a < 6)  // Outer loop controlling the number of rows
 	{
@@ -56,7 +57,7 @@ int main()
 }
 
 cout << "\n\n";  // Space between patterns
-
+	cout << "2nd pattern with Do while loop \n\n";
 	// Fourth pattern: Using a do-while loop to print a right-aligned triangle of asterisks
 	do
 	{
